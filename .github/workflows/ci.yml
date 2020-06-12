@@ -16,7 +16,7 @@ jobs:
 
     - name: Check out code
       uses: actions/checkout@v2
-    - run: zip -r frontend.zip .
+    - run: zip -r frontend.zip README.md
       working-directory: frontend
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2
@@ -41,7 +41,7 @@ jobs:
         # Artifact name
         name: frontend.zip # optional
         # Destination path
-        path: frontend/frontend.zip # optional
+        path: frontend.zip # optional
     - run: tree
     - run: unzip frontend.zip
       working-directory: frontend
