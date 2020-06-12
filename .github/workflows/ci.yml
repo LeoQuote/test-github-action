@@ -40,8 +40,6 @@ jobs:
       with:
         # Artifact name
         name: frontend.zip # optional
-        # Destination path
-        path: frontend.zip # optional
     - run: find . 
     - run: unzip frontend.zip
     - run: find .
