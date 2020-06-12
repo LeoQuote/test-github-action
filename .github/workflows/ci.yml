@@ -16,15 +16,14 @@ jobs:
 
     - name: Check out code
       uses: actions/checkout@v2
-    - run: touch test
-    - run: zip -r frontend.zip test
+    - run: mkdir test && touch test/1
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2
       with:
         # Artifact name
         name: frontend # optional
         # A file, directory or wildcard pattern that describes what to upload
-        path: frontend.zip
+        path: test
 
 
   docker:
