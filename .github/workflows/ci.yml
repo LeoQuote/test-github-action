@@ -17,14 +17,13 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v2
     - run: zip -r frontend.zip README.md
-      working-directory: frontend
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2
       with:
         # Artifact name
         name: frontend.zip # optional
         # A file, directory or wildcard pattern that describes what to upload
-        path: frontend/frontend.zip
+        path: frontend.zip
 
 
   docker:
@@ -44,4 +43,3 @@ jobs:
         path: frontend.zip # optional
     - run: tree
     - run: unzip frontend.zip
-      working-directory: frontend
