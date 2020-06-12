@@ -16,7 +16,8 @@ jobs:
 
     - name: Check out code
       uses: actions/checkout@v2
-    - run: zip -r frontend.zip README.md
+    - run: touch test
+    - run: zip -r frontend.zip test
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2
       with:
@@ -43,3 +44,4 @@ jobs:
         path: frontend.zip # optional
     - run: tree
     - run: unzip frontend.zip
+    - run: tree
