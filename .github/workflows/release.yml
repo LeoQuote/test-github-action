@@ -34,5 +34,5 @@ jobs:
         echo test, and deploy your project.
     - name: publish to some where
       run: |
-        pretending to be releasing.
+        echo pretending to be releasing.
         echo release tag: $GITHUB_REF
